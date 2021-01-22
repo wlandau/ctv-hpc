@@ -592,7 +592,12 @@
       <li> The <pkg>GUIProfiler</pkg> package visualizes the results of
         profiling R programs.
       </li>
-
+      <li>
+        The <pkg>profile</pkg> package defines a data structure for profiler data, and it reads and writes <code>Rprof</code> and <a href="https://github.com/google/pprof"><code>pprof</code></a> file formats.
+      </li>
+      <li>
+        The <pkg>proffer</pkg> package is an interface to visualize <code>Rprof</code> and <code>pprof</code> data using Google's <a href="https://github.com/google/pprof"><code>pprof</code></a> utility.
+      </li>
     </ul>
 
   </info>
@@ -652,6 +657,8 @@
     <pkg>peperr</pkg>
     <pkg>permGPU</pkg>
     <pkg>pls</pkg>
+    <pkg>proffer</pkg>
+    <pkg>profile</pkg>
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
     <pkg>profvis</pkg>
