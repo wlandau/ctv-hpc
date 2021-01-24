@@ -474,7 +474,7 @@ higher-level convenience functions are planned for later R releases.
     data structure for profiling output, and it processes
     [`pprof`](https://github.com/google/pprof) and `Rprof` and files.
   - The [proffer](https://cran.r-project.org/package=proffer) package is an
-    interface to visualize `Rprof` and `pprof` data using Google's
+    interface to visualize `Rprof` and `pprof` data using the
     [`pprof`](https://github.com/google/pprof) utility.
   - The `xrprof` command line tool uses `ptrace` to profile external R
     processes that are already running. The output includes calls to

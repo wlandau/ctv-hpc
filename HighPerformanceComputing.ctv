@@ -600,7 +600,7 @@
       </li>
       <li>
         The <pkg>proffer</pkg> package is an interface to visualize
-        <code>Rprof</code> and <code>pprof</code> data using Google's
+        <code>Rprof</code> and <code>pprof</code> data using the
         <a href="https://github.com/google/pprof"><code>pprof</code></a> utility.
       </li>
       <li>
