@@ -593,7 +593,7 @@
         profiling R programs.
       </li>
       <li>
-        The <pkg>profile</pkg> package defines a data structure for profiler data, and it reads and writes <code>Rprof</code> and <a href="https://github.com/google/pprof"><code>pprof</code></a> file formats.
+        The <pkg>profile</pkg> package establishes a data structure for profiling output, and it processes <a href="https://github.com/google/pprof"><code>pprof</code></a> and <code>Rprof</code> and files.
       </li>
       <li>
         The <pkg>proffer</pkg> package is an interface to visualize <code>Rprof</code> and <code>pprof</code> data using Google's <a href="https://github.com/google/pprof"><code>pprof</code></a> utility.

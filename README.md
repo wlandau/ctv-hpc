@@ -470,9 +470,9 @@ higher-level convenience functions are planned for later R releases.
     Visser, can also be used to analyse profiling output.
   - The [GUIProfiler](https://cran.r-project.org/package=GUIProfiler) package
     visualizes the results of profiling R programs.
-  - The [profile](https://cran.r-project.org/package=profile) package defines a data
-    structure for profiler data, and it reads and writes `Rprof` and
-    [`pprof`](https://github.com/google/pprof) file formats.
+  - The [profile](https://cran.r-project.org/package=profile) package establishes a
+    data structure for profiling output, and it processes
+    [`pprof`](https://github.com/google/pprof) and `Rprof` and files.
   - The [proffer](https://cran.r-project.org/package=proffer) package is an
     interface to visualize `Rprof` and `pprof` data using Google's
     [`pprof`](https://github.com/google/pprof) utility.
