@@ -601,7 +601,8 @@
       <li>
         The <pkg>proffer</pkg> package is an interface to visualize
         <code>Rprof</code> and <code>pprof</code> data using the
-        <a href="https://github.com/google/pprof"><code>pprof</code></a> utility.
+        <a href="https://github.com/google/pprof"><code>pprof</code></a>
+        utility by Google.
       </li>
       <li>
         The <code>xrprof</code> command line tool uses <code>ptrace</code>
