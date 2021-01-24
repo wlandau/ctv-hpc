@@ -598,6 +598,9 @@
       <li>
         The <pkg>proffer</pkg> package is an interface to visualize <code>Rprof</code> and <code>pprof</code> data using Google's <a href="https://github.com/google/pprof"><code>pprof</code></a> utility.
       </li>
+      <li>
+        The <code>xrprof</code> command line tool uses <code>ptrace</code> to profile external R processes that are already running. The output includes calls to C/C++ functions, and visualization is possible through <a href = "http://www.brendangregg.com/flamegraphs.html"><code>FlameGraph</code></a>.
+      </li>
     </ul>
 
   </info>

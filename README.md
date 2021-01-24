@@ -476,6 +476,10 @@ higher-level convenience functions are planned for later R releases.
   - The [proffer](https://cran.r-project.org/package=proffer) package is an
     interface to visualize `Rprof` and `pprof` data using Google's
     [`pprof`](https://github.com/google/pprof) utility.
+  - The `xrprof` command line tool uses `ptrace` to profile external R
+    processes that are already running. The output includes calls to
+    C/C++ functions, and visualization is possible through
+    [`FlameGraph`](http://www.brendangregg.com/flamegraphs.html) .
 
 </div>
 
