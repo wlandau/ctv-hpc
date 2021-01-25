@@ -13,12 +13,12 @@
       are defining 'high-performance computing' rather loosely as just about anything
       related to pushing R a little further: using compiled code,
       parallel computing (in both explicit and implicit modes), working with
-      large objects as well as profiling. 
+      large objects as well as profiling.
     </p>
     <p>
-      Unless otherwise mentioned, all packages presented with hyperlinks 
+      Unless otherwise mentioned, all packages presented with hyperlinks
       are available from CRAN, the
-      Comprehensive R Archive Network. 
+      Comprehensive R Archive Network.
     </p>
     <p>
       Several of the areas discussed in this Task View are undergoing rapid
@@ -29,18 +29,18 @@
       Suggestions and corrections by Achim Zeileis, Markus
       Schmidberger, Martin Morgan, Max Kuhn, Tomas Radivoyevitch,
       Jochen Knaus, Tobias Verbeke, Hao Yu, David Rosenberg, Marco
-      Enea, Ivo Welch, Jay Emerson, Wei-Chen Chen, Bill Cleveland, 
+      Enea, Ivo Welch, Jay Emerson, Wei-Chen Chen, Bill Cleveland,
       Ross Boylan, Ramon Diaz-Uriarte, Mark Zeligman, Kevin Ushey, Graham
       Jeffries, Will Landau, Tim Flutre, Reza Mohammadi, Ralf Stubner,
-      Bob Jansen, Matt Fidler, Brent Brewington and Ben Bolder (as well as 
-      others I may have forgotten to add here) are gratefully acknowledged.  
+      Bob Jansen, Matt Fidler, Brent Brewington and Ben Bolder (as well as
+      others I may have forgotten to add here) are gratefully acknowledged.
     </p>
-    <p> 
+    <p>
       Contributions are always welcome, and encouraged. Since the start of
       this CRAN task view in October 2008, most contributions have arrived as
       email suggestions. The source file for this particular task view file
       now also reside in a GitHub repository (see below) so that pull
-      requests are also possible. 
+      requests are also possible.
     </p>
     <p>
       The <code>ctv</code> package supports these Task Views. Its functions
@@ -50,19 +50,19 @@
       <em>core</em> below.
     </p>
     <p>
-      <strong>Direct support in R started with release 2.14.0</strong> 
-      which includes a new package <strong>parallel</strong> incorporating 
-      (slightly revised) copies of packages multicore and 
-      <pkg>snow</pkg>.  Some types of clusters are not handled directly by 
+      <strong>Direct support in R started with release 2.14.0</strong>
+      which includes a new package <strong>parallel</strong> incorporating
+      (slightly revised) copies of packages multicore and
+      <pkg>snow</pkg>.  Some types of clusters are not handled directly by
       the base package 'parallel'. However, and as explained in the package
       vignette, the parts of parallel which provide <pkg>snow</pkg>-like functions will
       accept <pkg>snow</pkg> clusters including MPI clusters. Use
       <code>vignette("parallel")</code> to view the package vignette.
       <br/>
 
-      The <strong>parallel</strong> package also contains support for multiple 
-      RNG streams following L'Ecuyer et al (2002), with support for 
-      both mclapply and snow clusters.  
+      The <strong>parallel</strong> package also contains support for multiple
+      RNG streams following L'Ecuyer et al (2002), with support for
+      both mclapply and snow clusters.
       <br/>
 
       The version released for R 2.14.0 contains base functionality:
@@ -72,7 +72,7 @@
     <p>
       <strong>Parallel computing: Explicit parallelism</strong>
     </p>
-    <ul>	     
+    <ul>
       <li>Several packages provide the communications layer required for parallel
 	computing. The first package in this area was
 	rpvm by Li and Rossini which uses the PVM (Parallel Virtual
@@ -85,17 +85,17 @@
   	the <pkg>Rmpi</pkg> by Yu. <pkg>Rmpi</pkg> package is mature yet actively
 	maintained and offers access to numerous functions from the MPI
 	API, as well as a number of R-specific extensions.  <pkg>Rmpi</pkg>
-        can be used with the LAM/MPI, MPICH / MPICH2, Open MPI, and Deino MPI 
+        can be used with the LAM/MPI, MPICH / MPICH2, Open MPI, and Deino MPI
         implementations. It should be noted that LAM/MPI is now in
         maintenance mode, and new development is focused on Open MPI.
       </li>
       <li>
-        The <pkg>pbdMPI</pkg> package provides S4 classes to directly interface 
-        MPI in order to support the Single Program/Multiple Data (SPMD) parallel 
+        The <pkg>pbdMPI</pkg> package provides S4 classes to directly interface
+        MPI in order to support the Single Program/Multiple Data (SPMD) parallel
         programming style which is particularly useful for batch parallel execution.
-	The <pkg>pbdSLAP</pkg> builds on this and uses scalable linear algebra 
-	packages (namely BLACS, PBLAS, and ScaLAPACK) in double precision based 
-	on ScaLAPACK version 2.0.2. 
+	The <pkg>pbdSLAP</pkg> builds on this and uses scalable linear algebra
+	packages (namely BLACS, PBLAS, and ScaLAPACK) in double precision based
+	on ScaLAPACK version 2.0.2.
 	The <pkg>pbdBASE</pkg> builds on these and provides the core classes
         and methods for distributed data types.
         The <pkg>pbdPROF</pkg> package profiles MPI communication SPMD code
@@ -109,7 +109,7 @@
       <li>The <pkg>snow</pkg> (Simple Network of Workstations) package by
         Tierney et al. can use PVM, MPI, NWS as well as direct networking
         sockets. It provides an abstraction layer by hiding the
-	communications details. The <pkg>snowFT</pkg> package provides 
+	communications details. The <pkg>snowFT</pkg> package provides
         fault-tolerance extensions to <pkg>snow</pkg>.
       </li>
       <li>The <pkg>snowfall</pkg> package by Knaus provides a more recent
@@ -131,10 +131,10 @@
         are automatically identified. Iteration over elements in a collection
         is supported.
       </li>
-      <li>The <pkg>Rborist</pkg> package employs OpenMP pragmas to exploit 
+      <li>The <pkg>Rborist</pkg> package employs OpenMP pragmas to exploit
         predictor-level parallelism in the Random Forest algorithm which
-        promotes efficient use of multicore hardware in restaging data and in 
-        determining splitting criteria, both of which are performance 
+        promotes efficient use of multicore hardware in restaging data and in
+        determining splitting criteria, both of which are performance
         bottlenecks in the algorithm.
       </li>
       <li>The <pkg>h2o</pkg> package connects to the h2o open source machine
@@ -143,7 +143,7 @@
       </li>
       <li>The <pkg>randomForestSRC</pkg> package can use both OpenMP as well
         as MPI for random forest extensions suitable for survival analysis,
-        competing risks analysis, classification as well as regression 
+        competing risks analysis, classification as well as regression
       </li>
       <li>The <pkg>parSim</pkg> package can perform simulation studies using
         one or multiple cores, both locally and on HPC clusters.
@@ -156,8 +156,8 @@
     <p>
     <strong>Parallel computing: Implicit parallelism</strong>
     </p>
-    <ul>	     
-      <li>The pnmath package by Tierney 
+    <ul>
+      <li>The pnmath package by Tierney
 	(<a href="http://www.stat.uiowa.edu/~luke/R/experimental/">link</a>)
 	uses the OpenMP parallel processing directives of recent compilers
         (such gcc 4.2 or later) for implicit parallelism by replacing a
@@ -194,7 +194,7 @@
         The <pkg>drake</pkg> package is an R-focused pipeline similar to
         <a href="https://www.gnu.org/software/make">Make</a>. Parallel computing relies on the
         <code>parallel</code>, <code>future</code>, <code>batchtools</code>,
-        and <code>future.batchtools</code> packages, as well as 
+        and <code>future.batchtools</code> packages, as well as
         <a href="https://www.gnu.org/software/make">Makefiles</a>. Drake uses code analysis
         to configure the user's workflow and make the parallelism implicit.
       </li>
@@ -204,13 +204,13 @@
         href="https://www.mpi-magdeburg.mpg.de/projects/flexiblas">link</a>)
         is used.
       </li>
-      
+
     </ul>
 
     <p>
     <strong>Parallel computing: Grid computing</strong>
     </p>
-    <ul>	     
+    <ul>
       <li>The multiR package by Grose was presented at useR! 2008 but has not
       been released. It may offer a snow-style framework on a grid computing
       platform.
@@ -225,7 +225,7 @@
     <p>
     <strong>Parallel computing: Hadoop</strong>
     </p>
-    <ul>	     
+    <ul>
       <li>
 	The <github>saptarshiguha/RHIPE</github> package, started by
 	Saptarshi Guha, provides an interface between R and Hadoop for
@@ -256,12 +256,12 @@
         manipulation, and plotting of large numbers of histograms such
         as those created by mappers in a MapReduce application.
       </li>
-    </ul>	     
+    </ul>
 
     <p>
     <strong>Parallel computing: Random numbers</strong>
     </p>
-    <ul>	     
+    <ul>
       <li>Random-number generators for parallel computing are available via
         the <pkg>rlecuyer</pkg> package, the <pkg>rstream</pkg> package,
 	the <pkg>sitmo</pkg> package as well as the <pkg>dqrng</pkg> package.
@@ -272,7 +272,7 @@
         streams as generated by the package rstream, suitable for the
         different foreach backends.
       </li>
-      
+
     </ul>
 
 
@@ -280,16 +280,16 @@
     <p>
     <strong>Parallel computing: Resource managers and batch schedulers</strong>
     </p>
-    <ul>	     
+    <ul>
        <li>
         Job-scheduling toolkits permit management of
 	parallel computing resources and tasks.  The slurm (Simple Linux
         Utility for Resource Management) set of programs  works well with
-        MPI and slurm jobs can be submitted from R using the <pkg>rslurm</pkg> 
+        MPI and slurm jobs can be submitted from R using the <pkg>rslurm</pkg>
         package. (<a href="http://slurm.schedmd.com/">link</a>)
       </li>
       <li>
-        The Condor toolkit (<a href="http://www.cs.wisc.edu/condor/">link</a>) from 
+        The Condor toolkit (<a href="http://www.cs.wisc.edu/condor/">link</a>) from
 	the University of Wisconsin-Madison has been used with R as described
 	in this <a href="http://www.r-project.org/doc/Rnews/Rnews_2005-2.pdf">R
         News article</a>.
@@ -297,7 +297,7 @@
       <li>
         The sfCluster package by Knaus can be used with <pkg>snowfall</pkg>.
 	(<a href="http://www.imbi.uni-freiburg.de/parallel/">link</a>) but is
-	currently limited to LAM/MPI. 
+	currently limited to LAM/MPI.
       </li>
       <li>
         The <pkg>batch</pkg> package by Hoffmann can launch parallel computing
@@ -327,7 +327,7 @@
     <p>
     <strong>Parallel computing: Applications</strong>
     </p>
-    <ul>	     
+    <ul>
       <li>
         The <pkg>caret</pkg> package by Kuhn can use various frameworks (MPI,
         NWS etc) to parallelized cross-validation and bootstrap
@@ -373,9 +373,9 @@
 	the <pkg>orloca</pkg> package by Fernandez-Palacin and Munoz-Marquez
 	for operations research locational analysis,
 	the <pkg>rgenoud</pkg> package by Mebane and Sekhon for genetic
-	optimization using derivatives 
+	optimization using derivatives
 	the <bioc>affyPara</bioc> package by Schmidberger, Vicedo and
-	Mansmann for parallel normalization of Affymetrix microarrays, 
+	Mansmann for parallel normalization of Affymetrix microarrays,
 	and the <bioc>puma</bioc> package by Pearson et al. which propagates
 	uncertainty into standard microarray analyses such as differential
 	expression
@@ -383,7 +383,7 @@
 	one of the MPI, PVM, NWS or socket protocols supported by <pkg>snow</pkg>.
       </li>
       <li>The <gcode>bugsparallel</gcode> package uses <pkg>Rmpi</pkg> for distributed
-          computing of multiple MCMC chains using WinBUGS. 
+          computing of multiple MCMC chains using WinBUGS.
       </li>
       <li>The <pkg>xgboost</pkg> package by Chen et al. is an optimized
       distributed gradient boosting library designed to be highly efficient,
@@ -406,7 +406,7 @@
       </li>
       <li>
         Nowadays, many packages can use the facilities offered by
-        the <strong>parallel</strong> package. One example 
+        the <strong>parallel</strong> package. One example
         is <pkg>pls</pkg>.
       </li>
       <li>
@@ -486,7 +486,7 @@
     </p>
     <ul>
       <li>The <pkg>biglm</pkg> package by Lumley uses incremental computations to
-        offer <code>lm()</code> and <code>glm()</code> functionality to 
+        offer <code>lm()</code> and <code>glm()</code> functionality to
         data sets stored outside of R's main memory.
       </li>
       <li>The <pkg>ff</pkg> package by Adler et al. offers file-based access to data sets
@@ -516,9 +516,9 @@
 	available; it works in the presence of factors and can check for
 	singular matrices.
       </li>
-      <li>The <pkg>MonetDB.R</pkg> package allows R to access the MonetDB 
+      <li>The <pkg>MonetDB.R</pkg> package allows R to access the MonetDB
          column-oriented, open source database system as a
-	 backend. 
+	 backend.
       </li>
       <li>The <pkg>ffbase</pkg> package by de Jonge et al adds basic
         statistical functionality to the <pkg>ff</pkg> package.
@@ -587,7 +587,7 @@
       </li>
       <li>The <pkg>proftools</pkg> package by Tierney, and the
         <pkg>aprof</pkg> package by Visser, can also be used to analyse
-        profiling output. 
+        profiling output.
       </li>
       <li> The <pkg>GUIProfiler</pkg> package visualizes the results of
         profiling R programs.
@@ -605,10 +605,10 @@
         utility by Google.
       </li>
       <li>
-        The <code>xrprof</code> command line tool uses <code>ptrace</code>
-        to profile external R processes that are already running.
-        The output includes calls to C/C++ functions, and visualization
-        is possible through
+        The <a href="https://github.com/atheriel/xrprof"><code>xrprof</code></a>
+        command line tool uses <code>ptrace</code> to profile external R processes
+        that are already running. The output includes calls to
+        C/C++ functions, and visualization is possible through
         <a href = "http://www.brendangregg.com/flamegraphs.html"><code>FlameGraph</code></a>.
       </li>
     </ul>
@@ -662,7 +662,7 @@
     <pkg>OpenCL</pkg>
     <pkg>parSim</pkg>
     <pkg>partDSA</pkg>
-    <pkg>pbapply</pkg>    
+    <pkg>pbapply</pkg>
     <pkg>pbdBASE</pkg>
     <pkg>pbdPROF</pkg>
     <pkg>pbdMPI</pkg>
@@ -677,7 +677,7 @@
     <pkg>profvis</pkg>
     <pkg>pvclust</pkg>
     <pkg>qsub</pkg>
-    <pkg>randomForestSRC</pkg>    
+    <pkg>randomForestSRC</pkg>
     <pkg>Rborist</pkg>
     <pkg>Rcpp</pkg>
     <pkg>RcppParallel</pkg>
@@ -701,7 +701,7 @@
     <pkg>snowFT</pkg>
     <pkg>speedglm</pkg>
     <pkg>sqldf</pkg>
-    <pkg>ssgraph</pkg>    
+    <pkg>ssgraph</pkg>
     <pkg>STAR</pkg>
     <pkg>tensorflow</pkg>
     <pkg>tfestimators</pkg>
@@ -711,7 +711,7 @@
   </packagelist>
 
   <links>
-    <a href="http://www.stat.uiowa.edu/~luke/classes/295-hpc/">HPC computing notes by Luke Tierney for HPC class at University of Iowa</a> 
+    <a href="http://www.stat.uiowa.edu/~luke/classes/295-hpc/">HPC computing notes by Luke Tierney for HPC class at University of Iowa</a>
     <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-hpc/">Mailing List: R Special Interest Group High Performance Computing</a>
     <a href="http://www.jstatsoft.org/v31/i01/">Schmidberger, Morgan, Eddelbuettel, Yu, Tierney and Mansmann (2009) paper on 'State of the Art in Parallel Computing with R'</a>
     <a href="http://www.stat.uiowa.edu/~luke/R/experimental/">Luke Tierney's code directory for pnmath and pnmath0</a>
@@ -727,7 +727,7 @@
     <a href="http://www.imbi.uni-freiburg.de/parallel/">Parallel Computing in R with sfCluster/snowfall</a>
     <a href="http://en.wikipedia.org/wiki/Message_Passing_Interface">Wikipedia: Message Passing Interface (MPI)</a>
     <a href="http://en.wikipedia.org/wiki/Parallel_Virtual_Machine">Wikipedia: Parallel Virtual Machine (PVM)</a>
-    <a href="http://dirk.eddelbuettel.com/papers/ismNov2009introHPCwithR.pdf">Slides from Introduction to High-Performance Computing with R tutorial help in Nov 2009 at the Institute for Statistical Mathematics, Tokyo, Japan</a> 
+    <a href="http://dirk.eddelbuettel.com/papers/ismNov2009introHPCwithR.pdf">Slides from Introduction to High-Performance Computing with R tutorial help in Nov 2009 at the Institute for Statistical Mathematics, Tokyo, Japan</a>
     <a href="https://gforge.nbic.nl/projects/rgpu/">rgpu project at nbic.nl</a>
     <a href="http://icl.cs.utk.edu/magma/">Magma: Matrix Algebra on GPU and Multicore architectures</a>
     <a href="http://shop.oreilly.com/product/0636920021421.do">Parallel R: Data Analysis in the Distributed World</a>
@@ -737,6 +737,7 @@
     <github>saptarshiguha/RHIPE</github>
     <!-- <a href="http://www.bayesian-inference.com/software">LaplacesDemon</a> -->
     <github>ljdursi/beyond-single-core-R</github>
+    <github>atheriel/xrprof</github>
     <a href="https://github.com/eddelbuettel/ctv-hpc">GitHub repository for this Task View</a>
   </links>
 
