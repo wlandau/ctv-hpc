@@ -132,12 +132,7 @@ The version released for R 2.14.0 contains base functionality: higher-level conv
 
 **Profiling tools**
 
--   The [profr](https://cran.r-project.org/package=profr) and [profvis](https://cran.r-project.org/package=profvis) packages can visualize output from the `Rprof` interface for profiling.
--   The [proftools](https://cran.r-project.org/package=proftools) package by Tierney, and the [aprof](https://cran.r-project.org/package=aprof) package by Visser, can also be used to analyse profiling output.
--   The [GUIProfiler](https://cran.r-project.org/package=GUIProfiler) package visualizes the results of profiling R programs.
--   The [profile](https://cran.r-project.org/package=profile) package establishes a data structure for profiling output, and it processes [`pprof`](https://github.com/google/pprof) and `Rprof` and files.
--   The [proffer](https://cran.r-project.org/package=proffer) package is an interface to visualize `Rprof` and `pprof` data using the [`pprof`](https://github.com/google/pprof) utility by Google.
--   The [`xrprof`](https://github.com/atheriel/xrprof) command line tool uses `ptrace` to profile external R processes that are already running. The output includes calls to C/C++ functions, and visualization is possible through [`FlameGraph`](http://www.brendangregg.com/flamegraphs.html).
+Packages [profvis](https://cran.r-project.org/package=profvis), [proffer](https://cran.r-project.org/package=proffer), [profmem](https://cran.r-project.org/package=profmem), [GUIProfiler](https://cran.r-project.org/package=GUIProfiler), [proftools](https://cran.r-project.org/package=proftools), and [aprof](https://cran.r-project.org/package=aprof) summarize and visualize output from the `Rprof` interface for profiling. The [profile](https://cran.r-project.org/package=profile) package reads and writes profiling data and converts among file formats such as [`pprof`](https://github.com/google/pprof) by Google and `Rprof`. The [`xrprof`](https://github.com/atheriel/xrprof) command line tool uses `ptrace` to profile external R processes that are already running.
 
 ### CRAN packages:
 
@@ -197,6 +192,7 @@ The version released for R 2.14.0 contains base functionality: higher-level conv
 -   [pls](https://cran.r-project.org/package=pls)
 -   [proffer](https://cran.r-project.org/package=proffer)
 -   [profile](https://cran.r-project.org/package=profile)
+-   [profmem](https://cran.r-project.org/package=profmem)
 -   [profr](https://cran.r-project.org/package=profr)
 -   [proftools](https://cran.r-project.org/package=proftools)
 -   [profvis](https://cran.r-project.org/package=profvis)
